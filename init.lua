@@ -37,28 +37,15 @@ local plugins = {
     -- treesitter... you know what it is,
     {
         'nvim-treesitter/nvim-treesitter',
-        lazy = true,
         build = ":TSUpdate",
     },
     -- floating terminal,
     'voldikss/vim-floaterm',
 
     -- other lsp stff ,
-    {
-        'neovim/nvim-lspconfig',
-        lazy = true,
-        event = {"BufReadPre", "BufNewFile"},
-    },
-    {
-        'glepnir/lspsaga.nvim',
-        lazy = true,
-        event = {"BufReadPre", "BufNewFile"},
-    },
-    {
-        'williamboman/nvim-lsp-installer',
-        lazy = true,
-        event = {"BufReadPre", "BufNewFile"},
-    },
+    'neovim/nvim-lspconfig',
+    'glepnir/lspsaga.nvim',
+    'williamboman/nvim-lsp-installer',
 
     -- multi-cursor support,
     'terryma/vim-multiple-cursors' ,
@@ -113,14 +100,17 @@ local plugins = {
         end,
     },
 
+    'dcampos/nvim-snippy',
+    'dcampos/cmp-snippy',
+    'honza/vim-snippets',
     'neovim/nvim-lspconfig',
     'hrsh7th/cmp-nvim-lsp',
     'hrsh7th/cmp-buffer',
     'hrsh7th/cmp-path',
     'hrsh7th/cmp-cmdline',
     'hrsh7th/nvim-cmp',
-
     'nvim-lua/popup.nvim',
+    { 'vuciv/golf' },
 }
 require("lazy").setup(plugins, {})
 
@@ -130,5 +120,5 @@ require("config.commands")
 require("config.plugins")
 require("config.plugins.copilot")
 require("config.plugins.lualine")
-require("config.plugins.lsp")
+-- require("config.plugins.lsp")
 require("config.plugins.nvim-cmp")

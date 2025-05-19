@@ -18,12 +18,13 @@ vim.keymap.set('n', 'st', '<cmd>FloatermToggle<return>', opts)
 vim.keymap.set('n', '[f', '[m[{ ', opts)
 
 vim.keymap.set('n', '<SPACE>', '<Nop>', opts)
-vim.keymap.set('n', '<Leader>cc ', ':Compile<CR>', opts)
+vim.keymap.set('n', '<Leader>cc', ':Compile<CR>', opts)
 
 vim.keymap.set('n', 'K', ':call ShowDocumentation()<CR>', opts)
 vim.keymap.set('n', '<Leader>ff', '<cmd>Telescope find_files<return>', opts)
 vim.keymap.set('n', '<Leader>fb', '<cmd>Telescope buffers<return>', opts)
 vim.keymap.set('n', '<Leader>ft', '<cmd>Telescope tags<return>', opts)
+vim.keymap.set('n', '<Leader>fq', '<cmd>Telescope quickfix<return>', opts)
 vim.keymap.set('n', '<Leader>ee', ':NvimTreeToggle<CR>', optsCMD)
 
 vim.keymap.set('i', '^L', '<esc>[s1z=', opts)
